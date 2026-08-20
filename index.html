@@ -35,7 +35,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .hero-title-area h1 {
@@ -65,43 +65,32 @@
             color: var(--dark);
         }
 
-        /* Banner Amarillo Ajustado y Estilizado */
+        /* Banner Amarillo Principal */
         .badge-yellow-box {
             background: var(--yellow);
             color: var(--dark);
-            padding: 24px 30px;
-            border-radius: 30px;
-            text-align: center;
+            padding: 30px 40px;
+            border-radius: 28px;
             box-shadow: 0 10px 25px rgba(250, 204, 21, 0.2);
+            margin-bottom: 40px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            max-width: 100%;
-            margin-bottom: 50px;
+            align-items: center;
             flex-wrap: wrap;
             gap: 20px;
         }
 
         .badge-yellow-box h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 24px;
+            font-size: 32px;
             font-weight: 900;
-            line-height: 1.2;
-            text-align: left;
-        }
-
-        .badge-yellow-box p {
-            font-size: 14px;
-            font-weight: 600;
-            margin-top: 5px;
-            color: #1e293b;
-            text-align: left;
+            color: var(--dark);
         }
 
         .btn-alianza-global {
             background: var(--dark);
             color: white;
-            padding: 12px 24px;
+            padding: 14px 28px;
             border-radius: 50px;
             font-size: 14px;
             font-weight: 700;
@@ -111,6 +100,7 @@
             gap: 8px;
             transition: 0.2s;
             box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+            white-space: nowrap;
         }
 
         .btn-alianza-global:hover {
@@ -123,6 +113,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 25px;
+            margin-bottom: 50px;
         }
 
         .tool-card {
@@ -212,11 +203,89 @@
             text-decoration: underline;
         }
 
+        /* SECCIÓN INFERIOR DE TRANSPARENCIA Y RECURSOS (Caja Formal Organizada) */
+        .transparency-section {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 28px;
+            padding: 45px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .transparency-header {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 20px;
+        }
+
+        .transparency-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .transparency-header p {
+            font-size: 15px;
+            color: var(--gray-text);
+            font-weight: 500;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .resource-item {
+            background: #faf8f5;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            transition: 0.2s;
+        }
+
+        .resource-item:hover {
+            border-color: #cbd5e1;
+            background: #ffffff;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.03);
+        }
+
+        .resource-gadget {
+            font-size: 24px;
+            background: #e2e8f0;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            flex-shrink: 0;
+        }
+
+        .resource-content h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+
+        .resource-content p {
+            font-size: 13.5px;
+            color: var(--gray-text);
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
         @media (max-width: 768px) {
             .top-hero { grid-template-columns: 1fr; gap: 30px; }
             .hero-title-area h1 { font-size: 40px; }
             .badge-yellow-box { flex-direction: column; text-align: center; }
-            .badge-yellow-box h2, .badge-yellow-box p { text-align: center; }
+            .transparency-section { padding: 25px; }
         }
     </style>
 </head>
@@ -244,20 +313,15 @@ Latina</strong>.
             </div>
         </div>
 
-        <!-- BANNER AMARILLO AJUSTADO CON BOTÓN DE ALIANZA Y RECORDATORIO IA -->
+        <!-- BANNER AMARILLO PRINCIPAL -->
         <div class="badge-yellow-box">
-            <div>
-                <h2>CampusLA / De clase Mundial</h2>
-                <p>Descubre también nuestra <strong>IA Docente</strong> y la <strong>IA Becas ICETEX</strong> 
-
-disponibles a nivel mundial en la plataforma.</p>
-            </div>
+            <h2>CampusLA / De clase Mundial</h2>
             <a href="https://www.campuslatinoamerica.edu.co" target="_blank" class="btn-alianza-global">🤝 Alianza 
 
 con CampusLA</a>
         </div>
 
-        <!-- GRID DE HERRAMIENTAS Y RECURSOS -->
+        <!-- GRID DE HERRAMIENTAS Y RECURSOS GRATUITOS -->
         <div class="grid-tools">
             
             <!-- TEST ME -->
@@ -284,9 +348,9 @@ clave.</p>
                         <div class="tool-icon">▲</div>
                         <h3>Khan Academy</h3>
                     </div>
-                    <p>Recursos de clase mundial en matemáticas y ciencias para estudiantes de todos los 
+                    <p>Plataforma global totalmente gratuita de ejercicios y clases de matemáticas, ciencias y 
 
-niveles.</p>
+programación.</p>
                 </div>
                 <div class="tool-footer">
                     <a href="https://es.khanacademy.org" target="_blank" class="link-text">Ver recurso &rarr;</a>
@@ -296,177 +360,225 @@ Sitio</a>
                 </div>
             </div>
 
-            <!-- MEGAEDU -->
+            <!-- PHET INTERACTIVE SIMULATIONS -->
             <div class="tool-card">
                 <div>
                     <div class="tool-header">
-                        <div class="tool-icon">🌐</div>
-                        <h3>MegaEdu</h3>
+                        <div class="tool-icon">🧪</div>
+                        <h3>PhET Simulations</h3>
                     </div>
-                    <p>Transformación digital educativa y conectividad de alta velocidad para la región.</p>
+                    <p>Simulaciones interactivas gratuitas de física, química, biología y matemáticas creadas por 
+
+la Universidad de Colorado.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="https://megaedu.org.br" target="_blank" class="link-text">Ver recurso &rarr;</a>
-                    <a href="https://megaedu.org.br" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
-                </div>
-            </div>
-
-            <!-- NOVA ESCOLA -->
-            <div class="tool-card">
-                <div>
-                    <div class="tool-header">
-                        <div class="tool-icon">🍎</div>
-                        <h3>Nova Escola</h3>
-                    </div>
-                    <p>Plataforma líder para empoderar a educadores y docentes con contenidos prácticos.</p>
-                </div>
-                <div class="tool-footer">
-                    <a href="https://novaescola.org.br" target="_blank" class="link-text">Ver recurso &rarr;</a>
-                    <a href="https://novaescola.org.br" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
-                </div>
-            </div>
-
-            <!-- CEAP -->
-            <div class="tool-card">
-                <div>
-                    <div class="tool-header">
-                        <div class="tool-icon">⚙</div>
-                        <h3>CEAP</h3>
-                    </div>
-                    <p>Formación técnica especializada y de alto nivel enfocada en el crecimiento laboral.</p>
-                </div>
-                <div class="tool-footer">
-                    <a href="https://ceap.org.br" target="_blank" class="link-text">Ver recurso &rarr;</a>
-                    <a href="https://ceap.org.br" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
-                </div>
-            </div>
-
-            <!-- CUENTOLOGÍA -->
-            <div class="tool-card">
-                <div>
-                    <div class="tool-header">
-                        <div class="tool-icon">🎧</div>
-                        <h3>Cuentología</h3>
-                    </div>
-                    <p>Historias interactivas y recursos diseñados para fomentar el desarrollo emocional 
-
-infantil.</p>
-                </div>
-                <div class="tool-footer">
-                    <a href="https://cuentologia.com" target="_blank" class="link-text">Ver recurso &rarr;</a>
-                    <a href="https://cuentologia.com" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
-                </div>
-            </div>
-
-            <!-- LETRUS -->
-            <div class="tool-card">
-                <div>
-                    <div class="tool-header">
-                        <div class="tool-icon">✍</div>
-                        <h3>Letrus</h3>
-                    </div>
-                    <p>Sistema avanzado de alfabetización y escritura apoyado por inteligencia artificial.</p>
-                </div>
-                <div class="tool-footer">
-                    <a href="https://letrus.com.br" target="_blank" class="link-text">Ver recurso &rarr;</a>
-                    <a href="https://letrus.com.br" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
-                </div>
-            </div>
-
-            <!-- ROCKET LEARNING -->
-            <div class="tool-card">
-                <div>
-                    <div class="tool-header">
-                        <div class="tool-icon">🚀</div>
-                        <h3>Rocket Learning</h3>
-                    </div>
-                    <p>Potenciamos el aprendizaje temprano infantil mediante tecnología basada en datos.</p>
-                </div>
-                <div class="tool-footer">
-                    <a href="https://www.rocketlearning.org" target="_blank" class="link-text">Ver recurso 
+                    <a href="https://phet.colorado.edu/es/" target="_blank" class="link-text">Ver recurso 
 
 &rarr;</a>
-                    <a href="https://www.rocketlearning.org" target="_blank" class="btn-compartir">🔗 Compartir 
+                    <a href="https://phet.colorado.edu/es/" target="_blank" class="btn-compartir">🔗 Compartir 
 
 Sitio</a>
                 </div>
             </div>
 
-            <!-- AFINIDATA -->
+            <!-- CODE.ORG -->
             <div class="tool-card">
                 <div>
                     <div class="tool-header">
-                        <div class="tool-icon">🍼</div>
-                        <h3>Afinidata</h3>
+                        <div class="tool-icon">💻</div>
+                        <h3>Code.org</h3>
                     </div>
-                    <p>Desarrollo infantil temprano con actividades personalizadas para padres y tutores.</p>
+                    <p>Plataforma pública sin ánimo de lucro para aprender ciencias de la computación y 
+
+programación desde cero y gratis.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="https://afinidata.com" target="_blank" class="link-text">Ver recurso &rarr;</a>
-                    <a href="https://afinidata.com" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
+                    <a href="https://code.org" target="_blank" class="link-text">Ver recurso &rarr;</a>
+                    <a href="https://code.org" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
                 </div>
             </div>
 
-            <!-- FUNDAÇÃO LEMANN -->
+            <!-- DUOLINGO -->
             <div class="tool-card">
                 <div>
                     <div class="tool-header">
-                        <div class="tool-icon">🎓</div>
-                        <h3>Centro Lemann</h3>
+                        <div class="tool-icon">🦉</div>
+                        <h3>Duolingo</h3>
                     </div>
-                    <p>Liderazgo e innovación pedagógica enfocada en la promoción de una educación pública de 
+                    <p>Acceso abierto y gratuito para el aprendizaje de idiomas con un enfoque lúdico y accesible 
 
-excelencia.</p>
+para todos.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="https://fundacaolemann.org.br" target="_blank" class="link-text">Ver recurso 
+                    <a href="https://www.duolingo.com" target="_blank" class="link-text">Ver recurso &rarr;</a>
+                    <a href="https://www.duolingo.com" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
+                </div>
+            </div>
+
+            <!-- BIBLIOTECA CERVANTES -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <div class="tool-icon">📚</div>
+                        <h3>Biblioteca Cervantes</h3>
+                    </div>
+                    <p>Gran repositorio abierto y gratuito de literatura clásica, textos y recursos de lenguaje en 
+
+español.</p>
+                </div>
+                <div class="tool-footer">
+                    <a href="https://www.cervantesvirtual.com" target="_blank" class="link-text">Ver recurso 
 
 &rarr;</a>
-                    <a href="https://fundacaolemann.org.br" target="_blank" class="btn-compartir">🔗 Compartir 
+                    <a href="https://www.cervantesvirtual.com" target="_blank" class="btn-compartir">🔗 Compartir 
 
 Sitio</a>
                 </div>
             </div>
 
-            <!-- COMUNIDAD ALUMNI -->
+            <!-- MIT APP INVENTOR -->
             <div class="tool-card">
                 <div>
                     <div class="tool-header">
-                        <div class="tool-icon">🌟</div>
-                        <h3>Comunidad Alumni</h3>
+                        <div class="tool-icon">📱</div>
+                        <h3>MIT App Inventor</h3>
                     </div>
-                    <p>Conecta con nuestra red de egresados y líderes comprometidos con el desarrollo regional.</p>
+                    <p>Herramienta visual gratuita del MIT para que cualquier estudiante cree sus propias 
+
+aplicaciones móviles.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="https://www.campuslatinoamerica.edu.co" target="_blank" class="link-text">Ver recurso 
+                    <a href="https://appinventor.mit.edu" target="_blank" class="link-text">Ver recurso &rarr;</a>
+                    <a href="https://appinventor.mit.edu" target="_blank" class="btn-compartir">🔗 Compartir 
 
-&rarr;</a>
-                    <a href="https://www.campuslatinoamerica.edu.co" target="_blank" class="btn-compartir">🔗 
-
-Compartir Sitio</a>
+Sitio</a>
                 </div>
             </div>
 
-            <!-- CAMPUS INSIGHTS -->
+            <!-- SCRATCH -->
             <div class="tool-card">
                 <div>
                     <div class="tool-header">
-                        <div class="tool-icon">📈</div>
-                        <h3>Campus Insights</h3>
+                        <div class="tool-icon">🐱</div>
+                        <h3>Scratch MIT</h3>
                     </div>
-                    <p>Reportes, métricas y análisis detallados sobre el impacto educativo en América Latina.</p>
+                    <p>Comunidad de programación gratuita del MIT diseñada para que los jóvenes creen historias, 
+
+juegos y animaciones.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="https://www.campuslatinoamerica.edu.co" target="_blank" class="link-text">Ver recurso 
+                    <a href="https://scratch.mit.edu" target="_blank" class="link-text">Ver recurso &rarr;</a>
+                    <a href="https://scratch.mit.edu" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
+                </div>
+            </div>
 
-&rarr;</a>
-                    <a href="https://www.campuslatinoamerica.edu.co" target="_blank" class="btn-compartir">🔗 
+            <!-- GEOGEBRA -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <div class="tool-icon">📐</div>
+                        <h3>GeoGebra</h3>
+                    </div>
+                    <p>Software matemático dinámico y gratuito que integra geometría, álgebra, hojas de cálculo y 
 
-Compartir Sitio</a>
+gráficos.</p>
+                </div>
+                <div class="tool-footer">
+                    <a href="https://www.geogebra.org" target="_blank" class="link-text">Ver recurso &rarr;</a>
+                    <a href="https://www.geogebra.org" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
                 </div>
             </div>
 
         </div>
+
+        <!-- SECCIÓN DE TRANSPARENCIA Y RECURSOS ADICIONALES (ABAJO) -->
+        <div class="transparency-section">
+            <div class="transparency-header">
+                <h3>Recursos y Alianzas de Valor CampusLA</h3>
+                <<p>Alíate con CampusLA - abre tus propios centros de certificación - gana dinero para tu 
+
+institución lleva todos nuestros productos y software a tu región ten en tu zona: TOELF - TOEIC - PEARSON - 
+
+CAMBRIDGE - OXFORD - GEP - ITEP - TRINITY - ORACLE - y más de 250 examenes obligatorios para grado universitario en 
+
+todos los niveles contratacinoes secop - sena - CNSC - Simo y todas las universidades en LATAM - dale prestigio 
+
+internacional a tu institución - Conoce en detalle las herramientas institucionales, inteligencias artificiales e 
+
+infraestructura de certificación disponibles:</p>
+            </div>
+
+            <div class="resources-grid">
+                
+                <!-- Ítem 1 -->
+                <div class="resource-item">
+                    <div class="resource-gadget">🤖</div>
+                    <div class="resource-content">
+                        <h4>IA Docente & IA Becas ICETEX</h4>
+                        <p>Sistemas inteligentes de apoyo pedagógico y orientación de becas disponibles a nivel 
+
+mundial en la plataforma.</p>
+                    </div>
+                </div>
+
+                <!-- Ítem 2 -->
+                <div class="resource-item">
+                    <div class="resource-gadget">🌐</div>
+                    <div class="resource-content">
+                        <h4>Centros de Certificación Internacional</h4>
+                        <p>Apertura de centros autorizados para las pruebas internacionales más importantes del 
+
+mundo en inglés.</p>
+                    </div>
+                </div>
+
+                <!-- Ítem 3 -->
+                <div class="resource-item">
+                    <div class="resource-gadget">⚡</div>
+                    <div class="resource-content">
+                        <h4>Recursos Oracle & NatGeo</h4>
+                        <p>Acceso especializado a contenidos tecnológicos oficiales de Oracle y al ecosistema 
+
+educativo de NatGeo Learning.</p>
+                    </div>
+                </div>
+
+                <!-- Ítem 4 -->
+                <div class="resource-item">
+                    <div class="resource-gadget">📈</div>
+                    <div class="resource-content">
+                        <h4>Modelo de Ingresos Institucional</h4>
+                        <p>Esquema de monetización y ganancias para instituciones o particulares mediante la 
+
+implementación de exámenes y recursos.</p>
+                    </div>
+                </div>
+
+                <!-- Ítem 5 -->
+                <div class="resource-item">
+                    <div class="resource-gadget">🎓</div>
+                    <div class="resource-content">
+                        <h4>Certificación de Grado y Contratación</h4>
+                        <p>Certifica a estudiantes y docentes en exámenes exigidos obligatoriamente para procesos 
+
+universitarios y contratación pública.</p>
+                    </div>
+                </div>
+
+                <!-- Ítem 6 -->
+                <div class="resource-item">
+                    <div class="resource-gadget">🏛️</div>
+                    <div class="resource-content">
+                        <h4>Cobertura SECOP, SENA y CNSC</h4>
+                        <p>Validación y soporte directo para convocatorias estatales, SIMO y todas las 
+
+universidades de LATAM.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
 </body>
