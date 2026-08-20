@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Herramientas Gratuitas | CampusLA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Plus
+
++Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark: #0f172a;
+            --yellow: #facc15;
+            --bg-ivory: #faf8f5;
+            --gray-text: #475569;
+            --border-color: #e2e8f0;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-ivory);
+            color: var(--dark);
+            padding: 40px 20px 80px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Layout */
+        .top-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-title-area h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.1;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .hero-title-area .underline-brush {
+            height: 8px;
+            background: #a855f7;
+            width: 220px;
+            border-radius: 4px;
+        }
+
+        .hero-desc {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--gray-text);
+            font-weight: 500;
+        }
+
+        .hero-desc strong {
+            color: var(--dark);
+        }
+
+        /* Banner Amarillo Ajustado y Estilizado */
+        .badge-yellow-box {
+            background: var(--yellow);
+            color: var(--dark);
+            padding: 24px 30px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(250, 204, 21, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 420px;
+            margin-bottom: 50px;
+        }
+
+        .badge-yellow-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 1.2;
+        }
+
+        /* Grid de Herramientas */
+        .grid-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .tool-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: #cbd5e1;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+        }
+
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .tool-icon {
+            font-size: 28px;
+            background: #f1f5f9;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+        }
+
+        .tool-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .tool-card p {
+            font-size: 14px;
+            color: var(--gray-text);
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .tool-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 15px;
+        }
+
+        .btn-compartir {
+            background: #16a34a;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.2s;
+        }
+
+        .btn-compartir:hover {
+            background: #15803d;
+        }
+
+        .link-text {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .link-text:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .top-hero { grid-template-columns: 1fr; gap: 30px; }
+            .hero-title-area h1 { font-size: 40px; }
+            .badge-yellow-box { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- SECCIÓN SUPERIOR -->
+        <div class="top-hero">
+            <div class="hero-title-area">
+                <h1>Herramientas Gratuitas</h1>
+                <div class="underline-brush"></div>
+            </div>
+            <div class="hero-desc">
+                Ayudamos a <strong>miles de organizaciones, colegios, universidades</strong> y <strong>miles de 
+
+estudiantes</strong> a acceder a herramientas de aprendizaje gratuitas e ilimitadas en <span 
+
+style="color:#f97316">Matemáticas</span>, <span style="color:#3b82f6">Inglés</span>, <span 
+
+style="color:#10b981">Ciencias</span>, <span style="color:#ec4899">Lenguaje</span>, <span 
+
+style="color:#8b5cf6">artes</span>, <span style="color:#06b6d4">programación</span> y desarrollo en <strong>América 
+
+Latina</strong>.
+            </div>
+        </div>
+
+        <!-- BANNER AMARILLO AJUSTADO -->
+        <div class="badge-yellow-box">
+            <h2>CampusLA / De clase Mundial</h2>
+        </div>
+
+        <!-- GRID DE HERRAMIENTAS Y RECURSOS -->
+        <div class="grid-tools">
+            
+            <!-- TEST ME -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <div class="tool-icon">🎯</div>
+                        <h3>Test Me</h3>
+                    </div>
+                    <p>Plataforma de evaluación y diagnóstico académico de precisión para medir competencias 
+
+clave.</p>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="link-text">Ver recurso &rarr;</a>
+                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                </div>
+            </div>
+
+            <!-- KHAN ACADEMY -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <div class="tool-icon">▲</div>
+                        <h3>Khan Academy</h3>
+                    </div>
+                    <p>Recursos de clase mundial en matemáticas y ciencias para estudiantes de todos los 
+
+niveles.</p>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="link-text">Ver recurso &rarr;</a>
+                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                </div>
+            </div>
+
+            <!-- MEGAEDU -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <div class="tool-icon">🌐</div>
+                        <h3>MegaEdu</h3>
+                    </div>
+                    <p>Transformación digital educativa y conectividad de alta velocidad para la región.</p>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="link-text">Ver recurso &rarr;</a>
+                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                </div>
+            </div>
+
+            <!-- NOVA ESCOLA -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <div class="tool-icon">🍎</div>
+                        <h3>Nova Escola</h3>
+                    </div>
+                    <p>Plataforma líder para empoderar a educadores y docentes con contenidos prácticos.</p>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="link-text">Ver recurso &rarr;</a>
+                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                </div>
+            </div>
+
+            <!-- CEAP -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <div class="tool-icon">⚙</div>
+                        <h3>CEAP</h3>
+                    </div>
+                    <p>Formación técnica especializada y de alto nivel enfocada en el crecimiento laboral.</p>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="link-text">Ver recurso &rarr;</a>
+                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                </div>
+            </div>
+
+            <!-- CUENTOLOGÍA -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <div class="tool-icon">🎧</div>
+                        <h3>Cuentología</h3>
+                    </div>
+                    <p>Historias interactivas y recursos diseñados para fomentar el desarrollo emocional 
+
+infantil.</p>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="link-text">Ver recurso &rarr;</a>
+                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                </div>
+            </div>
+
+            <!-- LETRUS -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <div class="tool-icon">✍</div>
+                        <h3>Letrus</h3>
+                    </div>
+                    <p>Sistema avanzado de alfabetización y escritura apoyado por inteligencia artificial.</p>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="link-text">Ver recurso &rarr;</a>
+                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                </div>
+            </div>
+
+            <!-- ROCKET LEARNING -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <div class="tool-icon">🚀</div>
+                        <h3>Rocket Learning</h3>
+                    </div>
+                    <p>Potenciamos el aprendizaje temprano infantil mediante tecnología basada en datos.</p>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="link-text">Ver recurso &rarr;</a>
+                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                </div>
+            </div>
+
+            <!-- AFINIDATA -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <div class="tool-icon">🍼</div>
+                        <h3>Afinidata</h3>
+                    </div>
+                    <p>Desarrollo infantil temprano con actividades personalizadas para padres y tutores.</p>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="link-text">Ver recurso &rarr;</a>
+                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                </div>
+            </div>
+
+            <!-- FUNDAÇÃO LEMANN -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <div class="tool-icon">🎓</div>
+                        <h3>Centro Lemann</h3>
+                    </div>
+                    <p>Liderazgo e innovación pedagógica enfocada en la promoción de una educación pública de 
+
+excelencia.</p>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="link-text">Ver recurso &rarr;</a>
+                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                </div>
+            </div>
+
+            <!-- COMUNIDAD ALUMNI -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <div class="tool-icon">🌟</div>
+                        <h3>Comunidad Alumni</h3>
+                    </div>
+                    <p>Conecta con nuestra red de egresados y líderes comprometidos con el desarrollo regional.</p>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="link-text">Ver recurso &rarr;</a>
+                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                </div>
+            </div>
+
+            <!-- CAMPUS INSIGHTS -->
+            <div class="tool-card">
+                <div>
+                    <div class="tool-header">
+                        <div class="tool-icon">📈</div>
+                        <h3>Campus Insights</h3>
+                    </div>
+                    <p>Reportes, métricas y análisis detallados sobre el impacto educativo en América Latina.</p>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="link-text">Ver recurso &rarr;</a>
+                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
