@@ -75,9 +75,11 @@
             box-shadow: 0 10px 25px rgba(250, 204, 21, 0.2);
             display: flex;
             align-items: center;
-            justify-content: center;
-            max-width: 420px;
+            justify-content: space-between;
+            max-width: 100%;
             margin-bottom: 50px;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .badge-yellow-box h2 {
@@ -85,6 +87,35 @@
             font-size: 24px;
             font-weight: 900;
             line-height: 1.2;
+            text-align: left;
+        }
+
+        .badge-yellow-box p {
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 5px;
+            color: #1e293b;
+            text-align: left;
+        }
+
+        .btn-alianza-global {
+            background: var(--dark);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.2s;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+        }
+
+        .btn-alianza-global:hover {
+            background: #1e293b;
+            transform: translateY(-2px);
         }
 
         /* Grid de Herramientas */
@@ -184,7 +215,8 @@
         @media (max-width: 768px) {
             .top-hero { grid-template-columns: 1fr; gap: 30px; }
             .hero-title-area h1 { font-size: 40px; }
-            .badge-yellow-box { max-width: 100%; }
+            .badge-yellow-box { flex-direction: column; text-align: center; }
+            .badge-yellow-box h2, .badge-yellow-box p { text-align: center; }
         }
     </style>
 </head>
@@ -212,9 +244,17 @@ Latina</strong>.
             </div>
         </div>
 
-        <!-- BANNER AMARILLO AJUSTADO -->
+        <!-- BANNER AMARILLO AJUSTADO CON BOTÓN DE ALIANZA Y RECORDATORIO IA -->
         <div class="badge-yellow-box">
-            <h2>CampusLA / De clase Mundial</h2>
+            <div>
+                <h2>CampusLA / De clase Mundial</h2>
+                <p>Descubre también nuestra <strong>IA Docente</strong> y la <strong>IA Becas ICETEX</strong> 
+
+disponibles a nivel mundial en la plataforma.</p>
+            </div>
+            <a href="https://www.campuslatinoamerica.edu.co" target="_blank" class="btn-alianza-global">🤝 Alianza 
+
+con CampusLA</a>
         </div>
 
         <!-- GRID DE HERRAMIENTAS Y RECURSOS -->
@@ -249,8 +289,10 @@ clave.</p>
 niveles.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="#" class="link-text">Ver recurso &rarr;</a>
-                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                    <a href="https://es.khanacademy.org" target="_blank" class="link-text">Ver recurso &rarr;</a>
+                    <a href="https://es.khanacademy.org" target="_blank" class="btn-compartir">🔗 Compartir 
+
+Sitio</a>
                 </div>
             </div>
 
@@ -264,8 +306,8 @@ niveles.</p>
                     <p>Transformación digital educativa y conectividad de alta velocidad para la región.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="#" class="link-text">Ver recurso &rarr;</a>
-                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                    <a href="https://megaedu.org.br" target="_blank" class="link-text">Ver recurso &rarr;</a>
+                    <a href="https://megaedu.org.br" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
                 </div>
             </div>
 
@@ -279,8 +321,8 @@ niveles.</p>
                     <p>Plataforma líder para empoderar a educadores y docentes con contenidos prácticos.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="#" class="link-text">Ver recurso &rarr;</a>
-                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                    <a href="https://novaescola.org.br" target="_blank" class="link-text">Ver recurso &rarr;</a>
+                    <a href="https://novaescola.org.br" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
                 </div>
             </div>
 
@@ -294,8 +336,8 @@ niveles.</p>
                     <p>Formación técnica especializada y de alto nivel enfocada en el crecimiento laboral.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="#" class="link-text">Ver recurso &rarr;</a>
-                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                    <a href="https://ceap.org.br" target="_blank" class="link-text">Ver recurso &rarr;</a>
+                    <a href="https://ceap.org.br" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
                 </div>
             </div>
 
@@ -311,8 +353,8 @@ niveles.</p>
 infantil.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="#" class="link-text">Ver recurso &rarr;</a>
-                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                    <a href="https://cuentologia.com" target="_blank" class="link-text">Ver recurso &rarr;</a>
+                    <a href="https://cuentologia.com" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
                 </div>
             </div>
 
@@ -326,8 +368,8 @@ infantil.</p>
                     <p>Sistema avanzado de alfabetización y escritura apoyado por inteligencia artificial.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="#" class="link-text">Ver recurso &rarr;</a>
-                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                    <a href="https://letrus.com.br" target="_blank" class="link-text">Ver recurso &rarr;</a>
+                    <a href="https://letrus.com.br" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
                 </div>
             </div>
 
@@ -341,8 +383,12 @@ infantil.</p>
                     <p>Potenciamos el aprendizaje temprano infantil mediante tecnología basada en datos.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="#" class="link-text">Ver recurso &rarr;</a>
-                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                    <a href="https://www.rocketlearning.org" target="_blank" class="link-text">Ver recurso 
+
+&rarr;</a>
+                    <a href="https://www.rocketlearning.org" target="_blank" class="btn-compartir">🔗 Compartir 
+
+Sitio</a>
                 </div>
             </div>
 
@@ -356,8 +402,8 @@ infantil.</p>
                     <p>Desarrollo infantil temprano con actividades personalizadas para padres y tutores.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="#" class="link-text">Ver recurso &rarr;</a>
-                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                    <a href="https://afinidata.com" target="_blank" class="link-text">Ver recurso &rarr;</a>
+                    <a href="https://afinidata.com" target="_blank" class="btn-compartir">🔗 Compartir Sitio</a>
                 </div>
             </div>
 
@@ -373,8 +419,12 @@ infantil.</p>
 excelencia.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="#" class="link-text">Ver recurso &rarr;</a>
-                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                    <a href="https://fundacaolemann.org.br" target="_blank" class="link-text">Ver recurso 
+
+&rarr;</a>
+                    <a href="https://fundacaolemann.org.br" target="_blank" class="btn-compartir">🔗 Compartir 
+
+Sitio</a>
                 </div>
             </div>
 
@@ -388,8 +438,12 @@ excelencia.</p>
                     <p>Conecta con nuestra red de egresados y líderes comprometidos con el desarrollo regional.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="#" class="link-text">Ver recurso &rarr;</a>
-                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                    <a href="https://www.campuslatinoamerica.edu.co" target="_blank" class="link-text">Ver recurso 
+
+&rarr;</a>
+                    <a href="https://www.campuslatinoamerica.edu.co" target="_blank" class="btn-compartir">🔗 
+
+Compartir Sitio</a>
                 </div>
             </div>
 
@@ -403,8 +457,12 @@ excelencia.</p>
                     <p>Reportes, métricas y análisis detallados sobre el impacto educativo en América Latina.</p>
                 </div>
                 <div class="tool-footer">
-                    <a href="#" class="link-text">Ver recurso &rarr;</a>
-                    <a href="#" class="btn-compartir">🔗 Compartir Sitio</a>
+                    <a href="https://www.campuslatinoamerica.edu.co" target="_blank" class="link-text">Ver recurso 
+
+&rarr;</a>
+                    <a href="https://www.campuslatinoamerica.edu.co" target="_blank" class="btn-compartir">🔗 
+
+Compartir Sitio</a>
                 </div>
             </div>
 
